@@ -50,6 +50,7 @@ program main
    ierror = call_py(return_obj, pytorch2fortran, "wb_out", args)
    ierror = cast(w0_py, return_obj)
    ierror = w0_py%get_data(w1, order='C')
+   call err_print
    call args%destroy
    call return_obj%destroy
    
